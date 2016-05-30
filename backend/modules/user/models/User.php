@@ -5,6 +5,7 @@ namespace backend\modules\user\models;
 use backend\modules\content\models\Content;
 
 use backend\modules\file\models\File;
+use backend\modules\notification\models\Notification;
 use OAuth2\Storage\UserCredentialsInterface;
 use Yii;
 use yii\web\IdentityInterface;
@@ -104,6 +105,14 @@ class User extends \backend\db\Model implements \yii\web\IdentityInterface, User
             'user_image',
             ['user_id' => 'id']
         );
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getNotifications()
+    {
+        return $this->hasMany(Notification::className(), ['id' => 'sender']);
     }
 
     /**

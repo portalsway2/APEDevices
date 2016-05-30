@@ -49,7 +49,8 @@ return [
                         'backend/payment/payment',
                         'backend/shipping/shipping',
                         'backend/paymentmethod/paymentmethod',
-                        'backend/customer/customer'
+                        'backend/customer/customer',
+                        'backend/notification/notification'
                     ]
                 ],
                 [

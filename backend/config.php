@@ -40,6 +40,10 @@ return [
         'customer' => [
             'class' => 'backend\modules\customer\customer',
         ],
+        'notification' => [
+            'class' => 'backend\modules\notification\notification',
+        ],
+
     ],
     'globalComponents' => [
         'filterRegistry' => [
